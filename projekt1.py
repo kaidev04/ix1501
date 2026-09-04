@@ -57,6 +57,9 @@ def generate_trials(n_faces, n_trials):
 
 # Return the probability of wins for n amount of trials
 def generate_probability_for_trials(n_trials):
+    # Convert the 2D array into an np.array so we can sum the results of each trial 
+    # by summing the same index of each trial result array to get the total sum for that trial
+    # using sum(axis=0)
     trial_results = np.array([generate_trials(i, n_trials) for i in dice_faces]).sum(axis=0)
 
     mc_sum_under_10 = [i for i in trial_results if i <= 10]
