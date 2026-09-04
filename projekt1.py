@@ -37,11 +37,11 @@ print("------------------\n\n")
 
 # --- Task 2 ---
 # Splice the array to get the sections that satisfies the winning condition
-sum_less_than_10 = convolution_sum[0 : 10 - min_sum + 1]
-sum_bigger_than_45 = convolution_sum[45 - min_sum : max_sum - min_sum + 1]
+sum_under_10 = convolution_sum[0 : 10 - min_sum + 1]
+sum_over_45 = convolution_sum[45 - min_sum : max_sum - min_sum + 1]
 
 # Sum all the winning probabilities to get the total win probability
-win_probability = sum_less_than_10.sum() + sum_bigger_than_45.sum()
+win_probability = sum_under_10.sum() + sum_over_45.sum()
 print("--- Task 2 ---")
 print(f"Win probability = {win_probability} ---> {win_probability * 100}%")
 print("------------------\n\n")
